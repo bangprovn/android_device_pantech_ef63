@@ -21,5 +21,11 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/device_check.sh:system/bin/device_check.sh
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.ef63
+
 # Inherit from msm8974-common
 $(call inherit-product, device/pantech/msm8974-common/msm8974.mk)
+
+$(call inherit-product, vendor/pantech/ef63/ef63-vendor.mk)
